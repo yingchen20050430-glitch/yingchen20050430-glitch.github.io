@@ -296,8 +296,11 @@
       [4, 8, 12, 16, 20].forEach(idx => {
         let k = hand.keypoints[idx];
         let x = map(k.x, 0, 640, 0, width) + gx, y = map(k.y, 0, 480, 0, height) + gy;
-        noFill(); stroke(255, 180); circle(x, y, 12);
-        fill(255, 150); textSize(9); text(`ID:${idx}`, x + 15, y - 10);
+        noFill(); stroke(255, 0, 0, 180); circle(x, y, 12);
+        if (idx === 8) {
+          stroke(255, 0, 0, 100); circle(x, y, 24); // 食指外圈
+        }
+        fill(255, 0, 0, 180); textSize(9); text(`ID:${idx}`, x + 15, y - 10);
       });
     }
 
