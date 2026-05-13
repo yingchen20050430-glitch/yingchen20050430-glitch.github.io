@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanel 品牌發展專題報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;600&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            gold: '#C5A059',
+                            dark: '#111111',
+                            charcoal: '#1A1A1A',
+                            accent: '#D4AF37',
+                            soft: '#F5F5F7'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Bodoni Moda', 'serif'],
+                        body: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #C5A059, #F5E6AD);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="font-body">
+
+    <!-- Header / Hero Section -->
+    <header class="relative h-[40vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-luxury-charcoal via-black to-black"></div>
+        <div class="z-10 animate-fade-in">
+            <h1 class="font-display text-5xl md:text-7xl mb-4 tracking-widest uppercase">CHANEL</h1>
+            <div class="h-px w-24 bg-luxury-gold mx-auto mb-6"></div>
+            <p class="text-luxury-gold font-light tracking-[0.3em] text-sm md:text-base">THE FUTURE OF LUXURY</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-24 space-y-24">
+
+        <!-- 1. Infographic Section (置頂) -->
+        <section class="animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-luxury-gold font-display text-2xl">01</span>
+                <h2 class="text-2xl font-semibold tracking-wide">品牌發展資訊圖表</h2>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl border border-white/10 group bg-luxury-charcoal">
+                <div class="p-2 md:p-4">
+                    <img src='https://opal.google/board/blobs/afa80943-85e7-4bb3-a126-a95e1f2311b1' alt='media_2' class="w-full h-auto object-cover rounded-2xl transform transition-transform duration-700 group-hover:scale-[1.01]" />
+                </div>
+            </div>
+            <p class="mt-4 text-gray-400 text-sm text-center italic">根據報告內容製作的香奈兒 (Chanel) 品牌發展摘要資訊圖表</p>
+        </section>
+
+        <!-- 2. Video Section (置中) -->
+        <section class="animate-slide-up" style="animation-delay: 0.4s;">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-luxury-gold font-display text-2xl">02</span>
+                <h2 class="text-2xl font-semibold tracking-wide">品牌視覺動態摘要</h2>
+            </div>
+            <div class="max-w-4xl mx-auto relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-luxury-gold/20 to-transparent rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative glass-card rounded-3xl overflow-hidden shadow-2xl">
+                    <video src='https://opal.google/board/blobs/1a6386f7-ecaf-40f7-9e17-90eb08aebf70' alt='media_1' class="w-full aspect-video object-cover" controls autoplay muted loop></video>
+                </div>
+                <div class="mt-6 text-center space-y-2">
+                    <p class="text-gray-300 font-light">涵蓋品牌工藝、極致排他性零售空間、永續發展意象與循環修復服務</p>
+                    <p class="text-luxury-gold/60 text-xs tracking-widest uppercase">Atmospheric Visual Narrative</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Report Section (置底) -->
+        <section class="animate-slide-up" style="animation-delay: 0.6s;">
+            <div class="flex items-center gap-4 mb-8">
+                <span class="text-luxury-gold font-display text-2xl">03</span>
+                <h2 class="text-2xl font-semibold tracking-wide">專題探索報告</h2>
+            </div>
+
+            <!-- Executive Summary - Bento Style -->
+            <div class="bento-grid mb-16">
+                <div class="md:col-span-2 glass-card p-8 rounded-3xl border-l-4 border-l-luxury-gold">
+                    <h3 class="text-luxury-gold font-semibold mb-4 text-lg">摘要內容</h3>
+                    <ul class="space-y-4 text-gray-300 text-sm leading-relaxed">
+                        <li class="flex gap-3"><span class="text-luxury-gold">•</span> <strong>財務概況：</strong> 2024年進入市場調適期，儘管利潤下降，仍維持創紀錄資本支出。</li>
+                        <li class="flex gap-3"><span class="text-luxury-gold">•</span> <strong>創意領導：</strong> 2025年由馬蒂厄·布拉齊接任，邁向更具建築感與工藝深度的美學。</li>
+                        <li class="flex gap-3"><span class="text-luxury-gold">•</span> <strong>市場策略：</strong> 開設私人精品店、大幅漲價、推動美妝業務直接面對消費者轉型。</li>
+                        <li class="flex gap-3"><span class="text-luxury-gold">•</span> <strong>永續承諾：</strong> 2040年淨零排放目標，重點在於再生農業與修復服務。</li>
+                    </ul>
+                </div>
+                <div class="md:col-span-2 glass-card p-8 rounded-3xl flex flex-col justify-center items-center text-center">
+                    <div class="font-display text-4xl mb-2 text-gradient">2025</div>
+                    <div class="text-gray-400 uppercase tracking-widest text-xs">A New Era of Luxury Branding</div>
+                    <div class="mt-6 text-sm text-gray-500 max-w-xs">
+                        "香奈兒正試圖在快速變化的全球環境中，定義下一個世紀的奢華標準。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Report Body -->
+            <div class="prose prose-invert prose-gold max-w-none space-y-12">
+                <div class="glass-card p-8 md:p-12 rounded-[2rem]">
+                    <h2 class="font-display text-3xl mb-12 text-center tracking-tight">香奈兒（Chanel）近期發展與品牌分析</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-6">
+                            <div class="space-y-4">
+                                <h4 class="text-luxury-gold uppercase tracking-tighter font-bold border-b border-luxury-gold/20 pb-2">一、 財務表現與投資策略</h4>
+                                <p class="text-gray-300 leading-relaxed text-justify">
+                                    香奈兒作為頂尖的精品品牌，其近年來的財務數字反映了全球奢侈品市場的動盪。在2021年至2023年間營收達到近200億美元的高峰。然而，2024年受全球消費放緩影響，其營業利潤出現下滑。
+                                </p>
+                                <p class="text-gray-300 leading-relaxed text-justify">
+                                    面對波動，香奈兒採取「以投資換取長期品牌資產」的策略。2024年其資本支出高達18億美元，用於優化供應鏈、擴展零售網絡。
+                                </p>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h4 class="text-luxury-gold uppercase tracking-tighter font-bold border-b border-luxury-gold/20 pb-2">二、 創意指導與品牌美學</h4>
+                                <p class="text-gray-300 leading-relaxed text-justify">
+                                    在卡尔·拉格斐執掌36年後，維吉妮·維婭帶領品牌走向更為柔和與實穿的路線。2024年中，維婭離職，隨後由馬蒂厄·布拉齊接棒。預期將為香奈兒帶來更強烈的工藝感與現代剪裁，以吸引新一代消費者。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="space-y-4">
+                                <h4 class="text-luxury-gold uppercase tracking-tighter font-bold border-b border-luxury-gold/20 pb-2">三、 市場策略：追求「極致排他性」</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-white/5 p-4 rounded-xl">
+                                        <p class="text-sm font-semibold text-white mb-1">1. 私人精品店 (Private Boutiques)</p>
+                                        <p class="text-xs text-gray-400">開設僅限受邀客戶進入的沙龍空間，強化品牌層級感。</p>
+                                    </div>
+                                    <div class="bg-white/5 p-4 rounded-xl">
+                                        <p class="text-sm font-semibold text-white mb-1">2. 定價權力</p>
+                                        <p class="text-xs text-gray-400">多次調高經典款包袋價格，縮小與愛馬仕價差，鞏固資產級地位。</p>
+                                    </div>
+                                    <div class="bg-white/5 p-4 rounded-xl">
+                                        <p class="text-sm font-semibold text-white mb-1">3. 美妝渠道轉型</p>
+                                        <p class="text-xs text-gray-400">轉向直接面對消費者（DTC）模式，掌控品牌體驗。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <h4 class="text-luxury-gold uppercase tracking-tighter font-bold border-b border-luxury-gold/20 pb-2">四、 永續發展與企業責任</h4>
+                                <p class="text-gray-300 text-sm leading-relaxed">
+                                    品牌已獲得「科學減碳目標倡議」（SBTi）驗證，承諾在2040年實現全價值鏈的淨零排放。透過「Chanel & moi」計畫，提供產品修復與保養服務，旨在延長產品生命週期。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 pt-12 border-t border-white/10">
+                        <h4 class="text-center font-display text-2xl mb-6 italic">結論</h4>
+                        <p class="text-gray-300 text-center max-w-3xl mx-auto leading-loose italic">
+                            香奈兒目前正處於從「高速增長」轉向「品牌鞏固」的關鍵階段。在財務上展現了定力；在創意上預示著美學調整；在市場操作上強化稀缺性。總體而言，它正定義下一個世紀的奢華標準。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- References -->
+            <div class="mt-12 p-8 glass-card rounded-3xl opacity-80">
+                <h4 class="text-xs font-bold uppercase tracking-[0.2em] mb-4 text-luxury-gold">引用文獻來源</h4>
+                <ul class="grid md:grid-cols-2 gap-4 text-xs text-gray-500">
+                    <li>1. Chanel Financial Report 2023/2024</li>
+                    <li>2. The Fashion Law (2025): "The Matthieu Blazy Era"</li>
+                    <li>3. Vogue Business (2024): "Chanel gets SBTi validation"</li>
+                    <li>4. Luxury Society (2023): "Ultra-exclusive retail strategy"</li>
+                    <li>5. Barron’s (2024): "Slowdown in the global luxury market"</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Signature Footer Section -->
+        <footer class="pt-12 border-t border-white/5 flex flex-col items-center gap-6">
+            <div class="text-center">
+                <p class="text-gray-500 text-xs tracking-widest uppercase mb-1">學號：B11208042</p>
+                <div class="text-lg text-gray-300 tracking-wide">
+                    【主題探索報告】by <span class="italic text-red-600 font-semibold">Famidoc Chang</span>
+                </div>
+            </div>
+            
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="group flex flex-col items-center gap-2 text-luxury-gold/50 hover:text-luxury-gold transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 15l7-7 7 7" />
+                </svg>
+                <span class="text-[10px] uppercase tracking-widest">Back to top</span>
+            </button>
+        </footer>
+
+    </main>
+
+    <!-- Decorative Elements -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-luxury-gold via-white to-luxury-gold z-50"></div>
+</body>
+</html>

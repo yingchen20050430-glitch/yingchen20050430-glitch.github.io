@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Post Creator | Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        studio: {
+                            white: '#F9FAFB',
+                            card: '#FFFFFF',
+                            indigo: '#4F46E5',
+                            slate: '#374151',
+                            muted: '#6B7280',
+                            border: '#E5E7EB'
+                        },
+                        accent: {
+                            start: '#833AB4',
+                            middle: '#FD1D1D',
+                            end: '#FCB045'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9FAFB;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        .instagram-gradient-text {
+            background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+        .hashtag {
+            color: #4F46E5;
+            font-weight: 500;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        .hashtag:hover {
+            color: #4338CA;
+            text-decoration: underline;
+        }
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-studio-slate">
+
+    <!-- Header -->
+    <header class="glass-header sticky top-0 z-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-accent-start via-accent-middle to-accent-end flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight text-studio-slate">Instagram <span class="font-light text-studio-muted">Studio</span></h1>
+            </div>
+            <div class="hidden sm:flex items-center gap-4 text-sm font-medium text-studio-muted">
+                <span class="px-3 py-1 bg-studio-border/30 rounded-full">Project: Dior Campaign</span>
+                <span class="w-2 h-2 rounded-full bg-green-500"></span>
+                <span>Active</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 lg:py-12">
+        
+        <!-- Main Preview Card -->
+        <div class="bg-studio-card custom-shadow rounded-2xl overflow-hidden border border-studio-border animate-slide-up">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                
+                <!-- Left Column: Image Showcase -->
+                <div class="p-6 lg:p-10 bg-[#fafafa]">
+                    <div class="relative group">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-accent-start to-accent-end rounded-[14px] opacity-10 group-hover:opacity-20 transition duration-500 blur-sm"></div>
+                        <div class="relative aspect-square overflow-hidden rounded-xl border border-black/5 image-container shadow-sm">
+                            <img src='https://opal.google/board/blobs/04e43647-44b3-4d41-8d51-6aa990eb4e44' alt='media_1' />
+                        </div>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-[10px] font-bold tracking-[0.2em] text-studio-muted uppercase">Image Preview • 1:1 Aspect</span>
+                            <div class="flex gap-2">
+                                <div class="w-2 h-2 rounded-full bg-studio-border"></div>
+                                <div class="w-2 h-2 rounded-full bg-studio-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="p-6 lg:p-10 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-studio-border">
+                    <div class="space-y-8">
+                        <!-- Caption Section -->
+                        <section>
+                            <label class="text-[11px] font-bold tracking-[0.15em] text-studio-muted uppercase mb-4 block">Caption</label>
+                            <div class="text-lg leading-relaxed text-studio-slate font-normal space-y-4">
+                                <p id="post-body">沉浸在 Dior 的優雅世界中，每一處細節都訴說著對美學與工藝的極致追求。從經典裁剪到現代靈感，迪奧始終是法式優雅與永恆魅力的代名詞。✨👗</p>
+                                <div class="flex flex-wrap gap-x-2 gap-y-1">
+                                    <span class="hashtag">#Dior</span>
+                                    <span class="hashtag">#迪奧</span>
+                                    <span class="hashtag">#法式優雅</span>
+                                    <span class="hashtag">#時尚穿搭</span>
+                                    <span class="hashtag">#精品生活</span>
+                                    <span class="hashtag">#DiorStyle</span>
+                                    <span class="hashtag">#高定時尚</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Platform Preview Mockup -->
+                        <section class="pt-6 border-t border-studio-border/50">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-accent-start to-accent-end p-[1.5px]">
+                                    <div class="w-full h-full bg-white rounded-full p-[1.5px]">
+                                        <div class="w-full h-full bg-gray-100 rounded-full flex items-center justify-center">
+                                            <span class="text-[10px] font-bold">D</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold leading-none">dior_official</p>
+                                    <p class="text-[10px] text-studio-muted leading-none mt-1">Paris, France</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Footer Actions -->
+                    <div class="mt-12 flex flex-wrap gap-3">
+                        <button onclick="copyCaption()" class="flex-1 min-w-[140px] flex items-center justify-center gap-2 px-6 py-3.5 bg-studio-indigo text-white rounded-xl font-semibold text-sm hover:bg-studio-indigo/90 transition-all active:scale-[0.98] shadow-lg shadow-indigo-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                            </svg>
+                            Copy Caption
+                        </button>
+                        <button class="flex-1 min-w-[140px] flex items-center justify-center gap-2 px-6 py-3.5 bg-white border border-studio-border text-studio-slate rounded-xl font-semibold text-sm hover:bg-gray-50 transition-all active:scale-[0.98]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                            </svg>
+                            Download Post
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secondary Information: AI Prompt -->
+        <div class="mt-8 animate-fade-in" style="animation-delay: 0.3s;">
+            <details class="group bg-studio-card border border-studio-border rounded-xl transition-all duration-300">
+                <summary class="flex items-center justify-between p-5 cursor-pointer list-none">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-studio-border/40 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-studio-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span class="text-sm font-bold tracking-tight text-studio-slate uppercase">Visual Prompt Information</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-studio-muted group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </summary>
+                <div class="px-5 pb-6">
+                    <div class="p-4 bg-studio-white rounded-lg border border-studio-border/50">
+                        <p class="text-sm leading-relaxed text-studio-muted italic">
+                            "High-end fashion photography of a sophisticated woman wearing a classic Dior-inspired haute couture cream-colored gown with intricate floral embroidery and a cinched waist. She is posing elegantly on a sun-drenched Parisian balcony with the Eiffel Tower visible in the soft-focus background. The lighting is warm, golden hour sunlight, creating a dreamy and ethereal atmosphere. The shot is a 1:1 square composition, emphasizing the texture of the luxury fabric and the chic surroundings. Cinematic style, shallow depth of field, 8k resolution, photorealistic."
+                        </p>
+                    </div>
+                    <div class="mt-4 flex items-center gap-4">
+                        <div class="text-[10px] font-bold text-studio-muted/70 uppercase">Engine: Stable Diffusion XL</div>
+                        <div class="text-[10px] font-bold text-studio-muted/70 uppercase">Aspect: 1:1</div>
+                        <div class="text-[10px] font-bold text-studio-muted/70 uppercase">Steps: 50</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+    </main>
+
+    <script>
+        function copyCaption() {
+            const body = document.getElementById('post-body').innerText;
+            const hashtags = Array.from(document.querySelectorAll('.hashtag')).map(h => h.innerText).join(' ');
+            const fullText = body + '\n\n' + hashtags;
+            
+            navigator.clipboard.writeText(fullText).then(() => {
+                const btn = event.currentTarget;
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Copied!
+                `;
+                btn.classList.replace('bg-studio-indigo', 'bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.replace('bg-green-600', 'bg-studio-indigo');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
