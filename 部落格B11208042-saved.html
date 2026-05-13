@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【甜蜜解密】從拜神麵包到AI訂製 - 甜蜜少女感部落格</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sweet-pink': '#FFD1DC',
+                        'strawberry': '#FF85A2',
+                        'cream': '#FFF9F5',
+                        'lavender': '#E6E6FA',
+                        'matcha': '#D4EDDA',
+                        'chocolate': '#5D4037',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFF9F5;
+            background-image: radial-gradient(#FFD1DC 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(255, 133, 162, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FF85A2 0%, #BA68C8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bento-item {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-item:hover {
+            transform: scale(1.02);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FFF9F5;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #FFD1DC;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-gray-800 leading-relaxed custom-scrollbar">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-20 px-6">
+        <!-- Floating Elements -->
+        <div class="absolute top-10 left-10 w-24 h-24 bg-sweet-pink/30 rounded-full blur-2xl animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-32 h-32 bg-lavender/40 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
+        
+        <div class="max-w-6xl w-full z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 space-y-6 animate-slide-up">
+                    <div class="inline-block px-4 py-1 rounded-full bg-strawberry/10 text-strawberry font-bold text-sm tracking-widest uppercase">
+                        Dessert Secrets &bull; B11208042
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-display font-bold leading-tight">
+                        <span class="gradient-text">【甜蜜解密】</span><br/>
+                        從拜神麵包到AI訂製
+                    </h1>
+                    <p class="text-lg text-gray-600 font-light max-w-lg">
+                        俗話說：「甜點是裝在另一個胃裡的。」這絕對不是生物學上的謬誤，而是一種心理學上的救贖。
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 relative group">
+                    <div class="absolute inset-0 bg-strawberry rounded-[2rem] rotate-3 group-hover:rotate-6 transition-transform"></div>
+                    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl transition-transform transform group-hover:-translate-y-2">
+                        <img src='https://opal.google/board/blobs/1ecc7117-9717-4a78-8737-3a27bd318319' alt='Premium Cake Banner' class="w-full h-auto object-cover aspect-[4/5] md:aspect-[4/5]" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-24">
+        
+        <!-- Intro Quote -->
+        <section class="glass-card rounded-[2.5rem] p-8 md:p-16 text-center space-y-6 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-strawberry to-lavender"></div>
+            <p class="text-2xl md:text-3xl font-light italic text-gray-700 leading-relaxed">
+                「無論你正餐吃得再飽，只要那一盤精緻的『蛋糕』端上桌，你的大腦就會自動騰出空間。」
+            </p>
+            <div class="w-12 h-1 bg-strawberry mx-auto"></div>
+        </section>
+
+        <!-- Section 1: Chemical Reaction -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+            <div class="md:col-span-5 glass-card p-8 rounded-[2rem] border-l-8 border-strawberry flex flex-col justify-center">
+                <h2 class="text-3xl font-bold mb-6 font-display">1. 【這到底是什麼？】<br/><span class="text-strawberry">揭開蓬鬆的魔法！</span></h2>
+                <p class="text-gray-600 mb-8">從科學的角度來看，蛋糕其實是一場精密受控的化學反應。它不僅僅是麵粉加蛋，而是一場由「美味復仇者聯盟」交織而成的結構工程。</p>
+            </div>
+            <div class="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bento-item bg-white p-6 rounded-3xl shadow-sm border border-pink-100">
+                    <div class="w-12 h-12 bg-strawberry/10 rounded-2xl flex items-center justify-center text-2xl mb-4">🏠</div>
+                    <h3 class="font-bold text-xl mb-2">低筋麵粉</h3>
+                    <p class="text-sm text-gray-500">蛋糕的「建築結構」。蛋白質含量較低，負責蓋出軟綿綿、不帶韌性的細緻結構。</p>
+                </div>
+                <div class="bento-item bg-white p-6 rounded-3xl shadow-sm border border-pink-100">
+                    <div class="w-12 h-12 bg-strawberry/10 rounded-2xl flex items-center justify-center text-2xl mb-4">💧</div>
+                    <h3 class="font-bold text-xl mb-2">糖與油脂</h3>
+                    <p class="text-sm text-gray-500">「保濕與香氣」擔當。鎖住水分，干擾麵筋形成，確保口感酥軟。</p>
+                </div>
+                <div class="bento-item bg-strawberry text-white p-6 rounded-3xl shadow-lg sm:col-span-2">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl">✨</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-2">雞蛋與泡打粉</h3>
+                            <p class="text-sm opacity-90 leading-relaxed">膨脹擔當！打發過程中帶入的空氣與釋放的二氧化碳，是將麵糊吹成「海綿」的關鍵魔法。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: History Timeline -->
+        <section class="space-y-12">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold font-display mb-4">2. 【沒想到它以前是...】</h2>
+                <p class="text-gray-500">原來古希臘人就在吹蠟燭？揭開蛋糕的超狂黑歷史！</p>
+            </div>
+            
+            <div class="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-pink-300 before:to-transparent">
+                <!-- Timeline Item 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-strawberry text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        🏺
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[45%] glass-card p-6 rounded-3xl transition-all group-hover:shadow-xl">
+                        <div class="font-bold text-strawberry mb-1">古埃及時期</div>
+                        <h4 class="font-display font-bold text-xl mb-2">甜麵包時期</h4>
+                        <p class="text-gray-600 text-sm">與現代口感毫無關係，更像是加了蜂蜜、堅果與乾果的粗糙麵包，是奢侈的能量補給。</p>
+                    </div>
+                </div>
+                <!-- Timeline Item 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-strawberry text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        🌙
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[45%] glass-card p-6 rounded-3xl transition-all group-hover:shadow-xl">
+                        <div class="font-bold text-strawberry mb-1">古希臘起源</div>
+                        <h4 class="font-display font-bold text-xl mb-2">女神的月光</h4>
+                        <p class="text-gray-600 text-sm">祭祀月亮女神阿提米絲時，在圓形蛋糕上插上蠟燭，以此模仿月光的皎潔。</p>
+                    </div>
+                </div>
+                <!-- Timeline Item 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-strawberry text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                        ⚙️
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[45%] glass-card p-6 rounded-3xl transition-all group-hover:shadow-xl">
+                        <div class="font-bold text-strawberry mb-1">19世紀工業革命</div>
+                        <h4 class="font-display font-bold text-xl mb-2">輕盈時代的誕生</h4>
+                        <p class="text-gray-600 text-sm">「泡打粉」的問世，讓人類告別了沉重的酵母發酵口感，迎來真正的現代蛋糕。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Modern Types -->
+        <section class="space-y-12">
+            <h2 class="text-4xl font-bold font-display text-center">3. 【現在大家都在瘋什麼？】</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bento-item bg-lavender/20 p-8 rounded-[2rem] border-b-4 border-lavender flex flex-col h-full">
+                    <div class="text-4xl mb-6">☁️</div>
+                    <h3 class="font-bold text-xl mb-4">亞洲輕盈派</h3>
+                    <p class="text-gray-600 text-sm flex-grow">以日本、台灣為代表，追求極致空氣感，像雲朵般細膩。</p>
+                    <span class="mt-4 text-xs font-bold text-strawberry uppercase tracking-tighter italic">"Zero Guilt"</span>
+                </div>
+                <!-- Card 2 -->
+                <div class="bento-item bg-orange-50 p-8 rounded-[2rem] border-b-4 border-orange-200 flex flex-col h-full">
+                    <div class="text-4xl mb-6">🧈</div>
+                    <h3 class="font-bold text-xl mb-4">歐美重擊派</h3>
+                    <p class="text-gray-600 text-sm flex-grow">磅蛋糕愛好者，一磅麵粉一磅糖的極致紮實浪漫。</p>
+                    <span class="mt-4 text-xs font-bold text-strawberry uppercase tracking-tighter italic">"Pure Romance"</span>
+                </div>
+                <!-- Card 3 -->
+                <div class="bento-item bg-yellow-50 p-8 rounded-[2rem] border-b-4 border-yellow-200 flex flex-col h-full">
+                    <div class="text-4xl mb-6">🧀</div>
+                    <h3 class="font-bold text-xl mb-4">濃郁重症派</h3>
+                    <p class="text-gray-600 text-sm flex-grow">不管是紐約起司還是巴斯克，乳酪控的終極天堂。</p>
+                    <span class="mt-4 text-xs font-bold text-strawberry uppercase tracking-tighter italic">"Cheese Lover"</span>
+                </div>
+                <!-- Card 4 -->
+                <div class="bento-item bg-pink-50 p-8 rounded-[2rem] border-b-4 border-pink-200 flex flex-col h-full">
+                    <div class="text-4xl mb-6">🎨</div>
+                    <h3 class="font-bold text-xl mb-4">顏值至上派</h3>
+                    <p class="text-gray-600 text-sm flex-grow">翻糖造型藝術，極致造型力是 IG 的流量密碼。</p>
+                    <span class="mt-4 text-xs font-bold text-strawberry uppercase tracking-tighter italic">"Insta Worthy"</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Warning -->
+        <section class="relative py-12">
+            <div class="absolute inset-0 bg-red-50/50 rounded-[3rem] -rotate-1"></div>
+            <div class="relative p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold font-display">4. 【甜蜜的陷阱？】</h2>
+                    <p class="text-gray-600 text-lg">
+                        吃一口胖三斤？無糖蛋糕可能只是個都市傳說！
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-sm font-medium bg-white/60 p-4 rounded-2xl">
+                            <span class="text-red-400">⚠️</span>
+                            <span>反式脂肪：平價蛋糕中的心血管殺手</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-sm font-medium bg-white/60 p-4 rounded-2xl">
+                            <span class="text-red-400">⚠️</span>
+                            <span>隱藏油脂：宣稱減糖卻可能添加更多油脂</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-sm font-medium bg-white/60 p-4 rounded-2xl">
+                            <span class="text-red-400">⚠️</span>
+                            <span>人工色素：部分鮮豔蛋糕與過動症相關</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-red-300">
+                    <p class="text-gray-700 leading-relaxed italic">
+                        「別以為掛上『無糖』二字就能肆無忌憚地狂嗑。為了維持口感，往往會增加油脂含量，或者代糖吃多了可能導致腹瀉。」
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Future -->
+        <section class="space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-4xl font-bold font-display">5. 【未來的蛋糕會變身？】</h2>
+                <p class="text-strawberry font-medium">AI與科技的甜蜜碰撞</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group p-8 bg-white rounded-3xl border border-lavender hover:bg-lavender transition-all duration-500">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <span class="text-2xl group-hover:rotate-12 transition-transform">🤖</span> AI 數據調音師
+                    </h3>
+                    <p class="text-gray-600 text-sm">根據你的血糖與口味偏好，AI 精算調製出個人專屬的黃金甜度比例。</p>
+                </div>
+                <div class="group p-8 bg-white rounded-3xl border border-lavender hover:bg-pink-100 transition-all duration-500">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <span class="text-2xl group-hover:rotate-12 transition-transform">🖨️</span> 3D 列印魔法
+                    </h3>
+                    <p class="text-gray-600 text-sm">輸入設計圖，列印機能實現人工難以達成的複雜幾何結構，蛋糕變成雕塑品。</p>
+                </div>
+                <div class="group p-8 bg-white rounded-3xl border border-lavender hover:bg-matcha/30 transition-all duration-500">
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <span class="text-2xl group-hover:rotate-12 transition-transform">🌿</span> 綠色永續革命
+                    </h3>
+                    <p class="text-gray-600 text-sm">全植物奶、米粉取代小麥、生物分解包裝，讓每一口甜蜜都對地球友善。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="text-center py-20 bg-strawberry/5 rounded-[4rem] space-y-8 mb-20 relative overflow-hidden">
+             <div class="absolute -top-10 -right-10 w-40 h-40 bg-strawberry/10 rounded-full blur-3xl"></div>
+             <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-lavender/20 rounded-full blur-3xl"></div>
+             
+             <h2 class="text-3xl font-bold font-display">甜點是跨越千年的文明結晶</h2>
+             <p class="max-w-2xl mx-auto text-gray-600 leading-relaxed px-6">
+                 下次在你吹滅蠟燭前，不妨多看這塊魔法方塊兩眼——你吃的不是熱量，是歷史、科學與未來的縮影。
+             </p>
+             <button class="px-10 py-4 bg-strawberry text-white rounded-full font-bold shadow-lg shadow-strawberry/30 hover:scale-105 transition-transform">
+                 訂閱更多甜蜜情報
+             </button>
+        </section>
+
+    </main>
+
+    <script>
+        // Simple scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                    entry.target.style.opacity = "1";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = "0";
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
